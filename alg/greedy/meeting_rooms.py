@@ -1,5 +1,7 @@
 """
-this is the way to solve this probelm not the last implementation
+given a list of intervals [s,e] (start,end) for meetings
+find the least number of meeting rooms required
+this is similar to cpu problem from icpc 
 """
 
 def solve(arr : list[list[int,int]]) -> int:
