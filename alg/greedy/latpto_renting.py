@@ -1,5 +1,6 @@
 """
 this is the way to solve this probelm not the last implementation
+""
 """
 
 def solve(arr : list[list[int,int]]) -> int:
@@ -20,9 +21,12 @@ def solve(arr : list[list[int,int]]) -> int:
 
 if __name__ == "__main__":
     intervals = [
-        [5,10],
-        [15,20],
-        [0,30]
+        [0,2],
+        [4,6],
+        [0,4],
+        [7,8],
+        [9,11],
+        [3,10]
     ]
     res = solve(intervals)
     print(res)

@@ -12,17 +12,22 @@ A[i] = {0,1}
 
 
 def solve(arr : list[int]) -> int:
+    # o(n^2)
     # count = 0
     # for i in range(len(arr)):
     #     if arr[i] == 0:
     #         count += 1
     #         arr[i] = 1
     #         for j in range(i+1,len(arr)):
-    #             count += 1 ; arr[j] = not arr[j]
+    #             arr[j] = not arr[j]
     #     else:
     #         continue
     # print(arr)
     # return count
+    """
+    0 1 1 1 0  
+    0 0   
+    """
     count = 0
     for bulb in arr:
         if count % 2 == 0: bulb = bulb
