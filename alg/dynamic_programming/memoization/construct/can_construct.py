@@ -1,3 +1,8 @@
+"""
+given a list of word and a target 
+return true if u can make that target with those words
+"""
+
 
 """
 def solve(words:list[str] , target:str) -> bool:
@@ -16,6 +21,10 @@ def solve(words:list[str] , target:str) -> bool:
 """
 
 """
+n -> len(word)
+m -> len(target)
+time : O(n^m * m) 
+space : O(m ^ 2)
 def solve(words:list[str] , target:str) -> bool:
     if target == "" : return True
 
@@ -29,6 +38,8 @@ def solve(words:list[str] , target:str) -> bool:
 
 """
 
+# time : O(n * m^2)
+# space : O(m^2)
 def solve(words:list[str] , target:str,memo : dict[str,bool]) -> bool:
     if target in memo : return memo[target]
     if target == "" : return True
