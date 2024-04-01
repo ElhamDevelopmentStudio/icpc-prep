@@ -16,21 +16,33 @@ from typing import List, Tuple
 
 #     return False
 
-def solve(arr: List[Tuple[int, int]], cap: int,weight_taken : int) -> int:
-    if cap == 0: return weight_taken
-    if cap < 0: return 0
+# def solve(arr: List[Tuple[int, int]], cap: int,weight_taken : int) -> int:
+#     if cap == 0: return weight_taken
+#     if cap < 0: return 0
 
-    best = 0
+#     best = 0
 
-    for index, item in enumerate(arr):
-        weight, value = item
-        deep_copied_arr = copy.deepcopy(arr)
-        deep_copied_arr.pop(index)
+#     for index, item in enumerate(arr):
+#         weight, value = item
+#         deep_copied_arr = copy.deepcopy(arr)
+#         deep_copied_arr.pop(index)
 
-        res = solve(deep_copied_arr, cap - value , weight_taken + weight)
-        best = max(res,best)
+#         res = solve(deep_copied_arr, cap - value , weight_taken + weight)
+#         best = max(res,best)
 
-    return best
+#     return best
+
+
+def solve(arr: List[Tuple[int, int]], cap: int,weight_taken : int,profit : int) -> int:
+    if weight_taken == cap : return profit
+    
+    profit = 0
+
+    for index,(weight,value) in enumerate(arr):
+        res = weight + weight_taken
+        if res < cap:
+            pass
+    return profit
 
 
 if __name__ == "__main__":
@@ -50,6 +62,6 @@ if __name__ == "__main__":
     ]
     expected = 3 
     cap = 4
-    res = solve(arr,cap,0)
+    res = solve(arr,cap,0,0)
     assert res == expected ,  f"Wrong answer , expected {expected} got {res}"
     print(res)

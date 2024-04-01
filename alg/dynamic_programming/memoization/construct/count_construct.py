@@ -25,11 +25,8 @@ def solve(words:list[int],target:int,memo) -> int:
     if target == "" : return True
     ways = 0
     for word in words:
-        try:
-            if target.index(word) == 0:
+            if target.find(word) == 0:
                 ways += solve(words,target[len(word):],memo)
-        except ValueError:
-            continue
     
     memo[target] = ways
     return ways

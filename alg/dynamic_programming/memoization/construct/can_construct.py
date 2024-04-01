@@ -45,13 +45,10 @@ def solve(words:list[str] , target:str,memo : dict[str,bool]) -> bool:
     if target == "" : return True
 
     for word in words:
-        try:
-            if target.index(word) == 0:
-                if solve(words,
-                         target[len(word):],
-                         memo): memo[target] = True ; return True
-        except ValueError:
-            continue
+        if target.find(word) == 0:
+            if solve(words,
+                        target[len(word):],
+                        memo): memo[target] = True ; return True
     memo[target] = False
     return False
 

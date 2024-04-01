@@ -38,13 +38,10 @@ def solve(words:list[int],target:str,memo) -> list[list[str]]:
     if target == "" : return [[]]
     result = []
     for word in words:
-        try:
-            if target.index(word) == 0:
-                suffix_res = solve(words,target[len(word):],memo)
-                added_suffix_res = map(lambda ways : [word] + ways ,suffix_res)
-                result.extend(added_suffix_res)
-        except ValueError:
-            continue
+        if target.find(word) == 0:
+            suffix_res = solve(words,target[len(word):],memo)
+            added_suffix_res = map(lambda ways : [word] + ways ,suffix_res)
+            result.extend(added_suffix_res)
     memo[target] = result
     return result
 
