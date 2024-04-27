@@ -14,3 +14,8 @@ arr = [1,4,7,10]
 output = solve(arr)
 print(output)
 assert output == 39
+
+if __name__ == "__main__":
+    odd = set([1,2,3])
+    even = set([4,5,6])
+    print(odd.isdisjoint(even))
