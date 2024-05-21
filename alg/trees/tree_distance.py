@@ -103,6 +103,16 @@ def distance_of_nodes(root,a,b,n):
 
 
 
+def lcs(root,a,b):
+    if root == None or root == a or root == b:
+        return root
+
+    l = lcs(root.left,a,b)
+    r = lcs(root.right,a,b)
+    if l & r:
+        return root
+    return l or r
+
 """
             1
         2       4
