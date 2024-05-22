@@ -109,7 +109,7 @@ def lcs(root,a,b):
 
     l = lcs(root.left,a,b)
     r = lcs(root.right,a,b)
-    if l & r:
+    if l and  r:
         return root
     return l or r
 
