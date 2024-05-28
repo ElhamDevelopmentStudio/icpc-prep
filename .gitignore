@@ -1,3 +1,5 @@
 .vscode
 makefile
 last_point.txt
+venv/
+venv
