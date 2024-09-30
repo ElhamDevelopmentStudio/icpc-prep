@@ -8,12 +8,15 @@ def solve(arr : list[list[int,int]]) -> int:
     for i in arr:
         times.append((i[0],+1))
         times.append((i[1],-1))
-
+    
     times.sort(key = lambda x : x[0])
+    for j in times:
+        print(*j)
     curr = 0
     max = 0
 
     for i in times:
+        print(f"rn at {curr} and {i[0]}")
         curr += i[1]
         if curr > max : max = curr
     return max
