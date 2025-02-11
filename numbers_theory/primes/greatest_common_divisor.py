@@ -5,7 +5,7 @@ gcd is the greatest number that divides both a and b
 
 
 Euclid's algorithm:
-    gcd(a,b) = gcm(b,a%b) 
+    gcd(a,b) = gcd(b,a%b) 
     fox ex: gcd(24,36)
 
 
@@ -21,5 +21,7 @@ def gcd(a : int,b: int) -> int:
     if b == 0: return a
     return gcd(b,a%b)
 
-
-print(gcd(36,24))
+a,b = list(map(int,input().split()))
+print(gcd(
+a,b
+))
