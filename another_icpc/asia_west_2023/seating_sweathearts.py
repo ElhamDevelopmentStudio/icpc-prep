@@ -14,7 +14,7 @@ input_string = """7
 """
 
 
-sys.stdin = StringIO(input_string)
+#sys.stdin = StringIO(input_string)
 
 
 result = []
@@ -34,8 +34,8 @@ def solve(n,r,s1,s2):
     
 
     #print(f"s1_direction=")
-    print(f"s1_direction = {s1_direction},s1_location = {s1_location}")
-    print(f"s2_direction = {s2_direction},s2_location = {s2_location}\n")
+    #print(f"s1_direction = {s1_direction},s1_location = {s1_location}")
+    #print(f"s2_direction = {s2_direction},s2_location = {s2_location}\n")
     if s1_direction != s2_direction:
         return "no"
 

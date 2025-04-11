@@ -14,14 +14,13 @@ Euclid's algorithm:
 lcm(a,b) =  -------------
                gcd(a,b)
 """
-
+from functools import reduce
 
 
 def gcd(a : int,b: int) -> int:
     if b == 0: return a
     return gcd(b,a%b)
 
-a,b = list(map(int,input().split()))
-print(gcd(
-a,b
-))
+inputs = list(map(int,input().split()))
+res = reduce(gcd,inputs)
+print(res)
