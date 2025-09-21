@@ -1,0 +1,12 @@
+  GNU nano 8.0                     New Buffer                     Modified  
+84 = 2 * 48
+-> = 2 * ( 2 * 24 )
+-> = 2 * ( 2 * ( 2 * 12 ) )
+-> = 2 * ( 2 * ( 2 * 3 ( 2 * 2) )
+
+After factorization of the number
+
+-> 2^5 , 3^1
+we up each power so 5+1 = 6 and 1+1= 2 hence 
+-> 6 * 2 = 12
+so 84 has 12 factors
